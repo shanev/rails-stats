@@ -21,15 +21,15 @@ class RailsstatsController < ActionController::Base
     g = Gruff::Bar.new(500)
     g.data("Lines of Code", [] << stats.code_loc << stats.tests_loc)
     g.labels = { 0 => "Code", 1 => "Tests" }
-    g.write("public/images/stats.png")
+    g.write("#{RAILS_ROOT}/public/images/stats.png")
     
     g = Gruff::Pie.new(500)
     stats.statistics.each { |k,v| g.data(k, [] << v["codelines"]) unless TEST_TYPES.include? k }
-    g.write("public/images/breakdown.png")
+    g.write("#{RAILS_ROOT}/public/images/breakdown.png")
 
     g = Gruff::Pie.new(500)
     stats.statistics.each { |k,v| g.data(k, [] << v["codelines"]) if TEST_TYPES.include? k }
-    g.write("public/images/tests.png")    
+    g.write("#{RAILS_ROOT}/public/images/tests.png")    
   end
 
 end
