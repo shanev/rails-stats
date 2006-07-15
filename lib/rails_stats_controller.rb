@@ -1,4 +1,4 @@
-class RailsstatsController < ActionController::Base
+class RailsStatsController < ActionController::Base
   self.template_root = File.join(RAILS_ROOT, 'vendor/plugins/rails_stats/views')
   
   TEST_TYPES = %w(Units Functionals Unit\ tests Functional\ tests Integration\ tests)
