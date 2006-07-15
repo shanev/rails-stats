@@ -18,7 +18,7 @@ class RailsstatsController < ActionController::Base
   def index
     stats = RailsStats.new(*STATS_DIRECTORIES)        
 
-    g = Gruff::Bar.new(500)
+    g = Gruff::StackedBar.new(500)
     g.data("Lines of Code", [] << stats.code_loc << stats.tests_loc)
     g.labels = { 0 => "Code", 1 => "Tests" }
     g.write("#{RAILS_ROOT}/public/images/stats.png")
