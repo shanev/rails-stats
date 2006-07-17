@@ -7,4 +7,6 @@ versus lines of test code, and other data about the health of your Rails app.
 Example
 =======
 
-Check out a live example at http://shanesbrain.net/rails_stats
+Check out a live example at http://shanesbrain.net/rails_stats showing stats for typo, the blogging
+tool.
+
