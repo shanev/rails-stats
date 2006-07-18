@@ -4,6 +4,11 @@ RailsStats
 This is a graphical version of the 'stats' Rake task.  It generates a few graphs showing lines of code
 versus lines of test code, and other data about the health of your Rails app.
 
+Usage
+=====
+
+Simply install the plugin and browse to /rails_stats
+
 Example
 =======
 
